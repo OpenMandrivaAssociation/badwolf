@@ -1,23 +1,17 @@
-%global forgeurl https://gitlab.com/lanodan/badWolf
+%define tarname badWolf
 
 Name:           badwolf
 Version:        1.0.2
-Release:        1%{?dist}
+Release:        1
 Summary:        Web Browser which aims at security and privacy over usability
-
-%global tag v%{version}
-%forgemeta
-
 License:        BSD
 URL:            https://hacktivis.me/projects/badwolf
-Source0:        %{forgesource}
+Source0:        https://gitlab.com/lanodan/badWolf/-/archive/v%{version}/%{tarname}-v%{version}.tar.bz2
 
 BuildRequires:  make
-BuildRequires:  gcc
 BuildRequires:  gettext
 BuildRequires:  desktop-file-utils
-
-BuildRequires:  webkit2gtk3-devel
+BuildRequires:  pkgconfig(webkit2gtk-4.0)
 
 Requires:       hicolor-icon-theme
 
@@ -45,13 +39,11 @@ open in a background tab.
 
 
 %prep
-%autosetup -n badWolf-%{tag}
+%autosetup -n %{tarname}-v%{version}
 
 
 %build
-%set_build_flags
-%make_build all
-
+%make_build
 
 %install
 %make_install PREFIX=%{_prefix}
@@ -59,11 +51,6 @@ open in a background tab.
 rm -rf %{buildroot}%{_datadir}/doc/%{name}-%{version}
 
 %find_lang Badwolf
-
-
-%check
-desktop-file-validate %{buildroot}%{_datadir}/applications/%{name}.desktop
-
 
 %files -f Badwolf.lang
 %license COPYING
