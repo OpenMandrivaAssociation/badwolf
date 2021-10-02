@@ -42,6 +42,7 @@ open in a background tab.
 %autosetup -n %{tarname}-v%{version}
 
 %build
+%configure
 %make_build
 
 %install
