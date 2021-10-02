@@ -42,7 +42,7 @@ open in a background tab.
 %autosetup -n %{tarname}-v%{version}
 
 %build
-%configure
+PREFIX=%{_prefix} ./configure
 %make_build
 
 %install
