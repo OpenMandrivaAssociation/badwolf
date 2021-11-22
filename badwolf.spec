@@ -1,7 +1,7 @@
 %define tarname badWolf
 
 Name:           badwolf
-Version:        1.2.0
+Version:        1.2.2
 Release:        1
 Summary:        Web Browser which aims at security and privacy over usability
 License:        BSD
