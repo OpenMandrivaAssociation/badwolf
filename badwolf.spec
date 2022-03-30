@@ -1,19 +1,20 @@
+# Work around incomplete debug packages
+%global _empty_manifest_terminate_build 0
+
 %define tarname badWolf
 
-Name:           badwolf
-Version:        1.2.2
-Release:        1
-Summary:        Web Browser which aims at security and privacy over usability
-License:        BSD
-URL:            https://hacktivis.me/projects/badwolf
-Source0:        https://gitlab.com/lanodan/badWolf/-/archive/v%{version}/%{tarname}-v%{version}.tar.bz2
-
-BuildRequires:  make
-BuildRequires:  gettext
-BuildRequires:  desktop-file-utils
-BuildRequires:  pkgconfig(webkit2gtk-4.0)
-
-Requires:       hicolor-icon-theme
+Name:		badwolf
+Version:	1.2.2
+Release:	1
+Summary:	Web Browser which aims at security and privacy over usability
+License:	BSD
+URL:		https://hacktivis.me/projects/badwolf
+Source0:	https://gitlab.com/lanodan/badWolf/-/archive/v%{version}/%{tarname}-v%{version}.tar.bz2
+BuildRequires:	make
+BuildRequires:	gettext
+BuildRequires:	desktop-file-utils
+BuildRequires:	pkgconfig(webkit2gtk-4.0)
+Requires:	hicolor-icon-theme
 
 %description
 BadWolf is a minimalist and privacy-oriented WebKitGTK+ browser.
@@ -63,4 +64,4 @@ rm -rf %{buildroot}%{_datadir}/doc/%{name}-%{version}
 %{_datadir}/%{name}/interface.css
 %{_datadir}/applications/%{name}.desktop
 %{_datadir}/icons/hicolor/*/apps/%{name}.*
-%{_mandir}/man1/%{name}.1.*
+%doc %{_mandir}/man1/%{name}.1.*
