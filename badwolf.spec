@@ -5,7 +5,7 @@
 
 Name:		badwolf
 Version:	1.2.2
-Release:	2
+Release:	3
 Summary:	Web Browser which aims at security and privacy over usability
 License:	BSD
 URL:		https://hacktivis.me/projects/badwolf
