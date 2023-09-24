@@ -58,7 +58,7 @@ rm -rf %{buildroot}%{_datadir}/doc/%{name}-%{version}
 
 %files -f Badwolf.lang
 %license COPYING
-%doc README.md KnowledgeBase.md interface.txt
+%doc README.md KnowledgeBase.md
 %{_bindir}/badwolf
 %dir %{_datadir}/%{name}
 %dir %{_datadir}/%{name}/locale
