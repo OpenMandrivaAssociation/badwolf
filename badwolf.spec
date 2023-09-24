@@ -11,6 +11,7 @@ License:	BSD
 URL:		https://hacktivis.me/projects/badwolf
 #Source0:	https://gitlab.com/lanodan/badWolf/-/archive/v%{version}/%{tarname}-v%{version}.tar.bz2
 Source0:  https://hacktivis.me/releases/badwolf-%{version}.tar.gz
+BuildRequires:  ninja
 BuildRequires:	make
 BuildRequires:	gettext
 BuildRequires:	desktop-file-utils
@@ -45,10 +46,10 @@ open in a background tab.
 
 %build
 PREFIX=%{_prefix} ./configure
-%make_build
+%ninja_build -C build
 
 %install
-%make_install PREFIX=%{_prefix}
+%ninja_install -C build
 
 rm -rf %{buildroot}%{_datadir}/doc/%{name}-%{version}
 
