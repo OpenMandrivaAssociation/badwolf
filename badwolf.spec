@@ -46,7 +46,7 @@ open in a background tab.
 
 %build
 PREFIX=%{_prefix} ./configure
-%ninja_build -C build
+%ninja_build
 
 %install
 %ninja_install -C build
