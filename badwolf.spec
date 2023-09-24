@@ -41,7 +41,7 @@ open in a background tab.
 
 
 %prep
-%autosetup -n %{tarname}-v%{version}
+%autosetup -n %{name}-%{version}
 
 %build
 PREFIX=%{_prefix} ./configure
