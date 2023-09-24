@@ -16,6 +16,7 @@ BuildRequires:  ninja
 BuildRequires:	make
 BuildRequires:	gettext
 BuildRequires:	desktop-file-utils
+BuildRequires:  pkgconfig(libxml-2.0)
 BuildRequires:	pkgconfig(webkit2gtk-4.1)
 Requires:	hicolor-icon-theme
 
