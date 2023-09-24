@@ -51,8 +51,7 @@ PREFIX=%{_prefix} ./configure
 %ninja_build
 
 %install
-%ninja_install -C build
-
+%ninja_install
 rm -rf %{buildroot}%{_datadir}/doc/%{name}-%{version}
 
 %find_lang Badwolf
