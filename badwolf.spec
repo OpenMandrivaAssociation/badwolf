@@ -67,4 +67,5 @@ rm -rf %{buildroot}%{_datadir}/doc/%{name}-%{version}
 %{_datadir}/%{name}/interface.css
 %{_datadir}/applications/%{name}.desktop
 %{_datadir}/icons/hicolor/*/apps/%{name}.*
-%doc %{_mandir}/man1/%{name}.1.*
+%{_mandir}/man1/%{name}.1.*
+%{_mandir}/*/man1/badwolf.1.*
