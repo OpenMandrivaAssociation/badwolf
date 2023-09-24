@@ -11,11 +11,12 @@ License:	BSD
 URL:		https://hacktivis.me/projects/badwolf
 #Source0:	https://gitlab.com/lanodan/badWolf/-/archive/v%{version}/%{tarname}-v%{version}.tar.bz2
 Source0:  https://hacktivis.me/releases/badwolf-%{version}.tar.gz
+BuildRequires:  ed
 BuildRequires:  ninja
 BuildRequires:	make
 BuildRequires:	gettext
 BuildRequires:	desktop-file-utils
-BuildRequires:	pkgconfig(webkit2gtk-4.0)
+BuildRequires:	pkgconfig(webkit2gtk-4.1)
 Requires:	hicolor-icon-theme
 
 %description
