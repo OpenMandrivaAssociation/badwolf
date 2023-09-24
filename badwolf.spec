@@ -4,12 +4,13 @@
 %define tarname badWolf
 
 Name:		badwolf
-Version:	1.2.2
-Release:	3
+Version:	1.3.0
+Release:	1
 Summary:	Web Browser which aims at security and privacy over usability
 License:	BSD
 URL:		https://hacktivis.me/projects/badwolf
-Source0:	https://gitlab.com/lanodan/badWolf/-/archive/v%{version}/%{tarname}-v%{version}.tar.bz2
+#Source0:	https://gitlab.com/lanodan/badWolf/-/archive/v%{version}/%{tarname}-v%{version}.tar.bz2
+Source0:  https://hacktivis.me/releases/badwolf-%{version}.tar.gz
 BuildRequires:	make
 BuildRequires:	gettext
 BuildRequires:	desktop-file-utils
